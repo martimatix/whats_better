@@ -1,0 +1,24 @@
+<h2>Listing Things</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name (id)</th>
+      <th>Image url</th>
+      <th>Category</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for thing <- @things do %>
+    <tr>
+      <td><%= thing.id %></td>
+      <td><%= thing.image %></td>
+      <td><%= thing.category %></td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New thing", to: thing_path(@conn, :new) %>

@@ -1,0 +1,82 @@
+2016-01-31T10:50:04.157371000 0.437842s notice: Recursively removing directory /Users/martimatix/Projects/sandbox/whats_better_phoenix/rethinkdb_data/tmp
+2016-01-31T10:50:04.159139000 0.439613s notice: Initializing directory /Users/martimatix/Projects/sandbox/whats_better_phoenix/rethinkdb_data
+2016-01-31T10:50:04.159236000 0.439706s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/Users/martimatix/Projects/sandbox/whats_better_phoenix/rethinkdb_data' did not already exist or is empty.)
+2016-01-31T10:50:04.159278000 0.439749s notice: Running rethinkdb 2.2.3-1 (CLANG 7.0.2 (clang-700.1.81))...
+2016-01-31T10:50:04.163700000 0.444171s notice: Running on Darwin 15.3.0 x86_64
+2016-01-31T10:50:04.163781000 0.444252s notice: Loading data from directory /Users/martimatix/Projects/sandbox/whats_better_phoenix/rethinkdb_data
+2016-01-31T10:50:04.253987000 0.534457s info: Automatically using cache size of 174 MB
+2016-01-31T10:50:04.254912000 0.535382s notice: Listening for intracluster connections on port 29015
+2016-01-31T10:50:04.258901000 0.539371s notice: Listening for client driver connections on port 28015
+2016-01-31T10:50:04.259044000 0.539514s notice: Listening for administrative HTTP connections on port 8080
+2016-01-31T10:50:04.259050000 0.539520s notice: Listening on addresses: 127.0.0.1, ::1
+2016-01-31T10:50:04.259051000 0.539521s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2016-01-31T10:50:04.259054000 0.539523s notice: Server ready, "Marios_MBP_lan_hnj" 39411d25-27ab-40b9-a0ca-c18b98c4786c
+2016-01-31T15:20:41.786994000 1062.914111s notice: Server got SIGINT from pid 4803, uid 501; shutting down...
+2016-01-31T15:20:41.787289000 1062.914405s notice: Shutting down client connections...
+2016-01-31T15:20:41.787502000 1062.914618s notice: All client connections closed.
+2016-01-31T15:20:41.787511000 1062.914627s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2016-01-31T15:20:41.800823000 1062.927940s notice: Storage engine shut down.
+2016-01-31T15:20:44.176411000 0.393050s notice: Running rethinkdb 2.2.3-1 (CLANG 7.0.2 (clang-700.1.81))...
+2016-01-31T15:20:44.182509000 0.399144s notice: Running on Darwin 15.3.0 x86_64
+2016-01-31T15:20:44.182562000 0.399196s notice: Loading data from directory /Users/martimatix/Projects/sandbox/whats_better_phoenix/rethinkdb_data
+2016-01-31T15:20:44.225519000 0.442153s info: Automatically using cache size of 248 MB
+2016-01-31T15:20:44.226410000 0.443044s notice: Listening for intracluster connections on port 29015
+2016-01-31T15:20:44.228844000 0.445479s notice: Listening for client driver connections on port 28015
+2016-01-31T15:20:44.229147000 0.445781s notice: Listening for administrative HTTP connections on port 8080
+2016-01-31T15:20:44.229151000 0.445785s notice: Listening on addresses: 127.0.0.1, ::1
+2016-01-31T15:20:44.229152000 0.445786s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2016-01-31T15:20:44.229155000 0.445788s notice: Server ready, "Marios_MBP_lan_hnj" 39411d25-27ab-40b9-a0ca-c18b98c4786c
+2016-01-31T15:45:56.330770000 1512.493729s info: Table 50a16d6f-65bd-475e-896d-d5c774be6ac6: Added replica on this server.
+2016-01-31T15:45:58.108761000 1514.271605s info: Table 50a16d6f-65bd-475e-896d-d5c774be6ac6: Starting a new Raft election for term 1.
+2016-01-31T15:45:58.128334000 1514.291177s info: Table 50a16d6f-65bd-475e-896d-d5c774be6ac6: This server is Raft leader for term 1. Latest log index is 0.
+2016-01-31T16:55:06.540863000 5662.557512s notice: Server got SIGINT from pid 4803, uid 501; shutting down...
+2016-01-31T16:55:06.541063000 5662.557711s notice: Shutting down client connections...
+2016-01-31T16:55:06.541263000 5662.557912s notice: All client connections closed.
+2016-01-31T16:55:06.541282000 5662.557930s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2016-01-31T16:55:06.552693000 5662.569342s notice: Storage engine shut down.
+2016-01-31T17:28:26.576072000 0.483936s notice: Running rethinkdb 2.2.3-1 (CLANG 7.0.2 (clang-700.1.81))...
+2016-01-31T17:28:26.597235000 0.505095s notice: Running on Darwin 15.3.0 x86_64
+2016-01-31T17:28:26.597274000 0.505132s notice: Loading data from directory /Users/martimatix/Projects/sandbox/whats_better_phoenix/rethinkdb_data
+2016-01-31T17:28:26.647673000 0.555532s info: Automatically using cache size of 383 MB
+2016-01-31T17:28:26.648599000 0.556457s notice: Listening for intracluster connections on port 29015
+2016-01-31T17:28:26.667486000 0.575345s notice: Listening for client driver connections on port 28015
+2016-01-31T17:28:26.667632000 0.575491s notice: Listening for administrative HTTP connections on port 8080
+2016-01-31T17:28:26.667634000 0.575492s notice: Listening on addresses: 127.0.0.1, ::1
+2016-01-31T17:28:26.667635000 0.575493s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2016-01-31T17:28:26.667705000 0.575564s notice: Server ready, "Marios_MBP_lan_hnj" 39411d25-27ab-40b9-a0ca-c18b98c4786c
+2016-01-31T17:28:28.024726000 1.932528s info: Table 50a16d6f-65bd-475e-896d-d5c774be6ac6: Starting a new Raft election for term 2.
+2016-01-31T17:28:28.044254000 1.952056s info: Table 50a16d6f-65bd-475e-896d-d5c774be6ac6: This server is Raft leader for term 2. Latest log index is 2.
+2016-01-31T17:28:38.576142000 12.483541s info: Table 3211a92e-6228-402f-b190-d4cb930b8cf6: Added replica on this server.
+2016-01-31T17:28:40.315286000 14.222628s info: Table 3211a92e-6228-402f-b190-d4cb930b8cf6: Starting a new Raft election for term 1.
+2016-01-31T17:28:40.335379000 14.242721s info: Table 3211a92e-6228-402f-b190-d4cb930b8cf6: This server is Raft leader for term 1. Latest log index is 0.
+2016-02-01T08:55:49.655874000 48921.550368s notice: Server got SIGINT from pid 4803, uid 501; shutting down...
+2016-02-01T08:55:49.656118000 48921.550612s notice: Shutting down client connections...
+2016-02-01T08:55:49.667392000 48921.561886s notice: All client connections closed.
+2016-02-01T08:55:49.667413000 48921.561906s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2016-02-01T08:55:49.679060000 48921.573554s notice: Storage engine shut down.
+2016-02-01T18:26:03.465339000 0.468657s notice: Running rethinkdb 2.2.3-1 (CLANG 7.0.2 (clang-700.1.81))...
+2016-02-01T18:26:03.470254000 0.473568s notice: Running on Darwin 15.3.0 x86_64
+2016-02-01T18:26:03.470295000 0.473607s notice: Loading data from directory /Users/martimatix/Projects/sandbox/whats_better_phoenix/rethinkdb_data
+2016-02-01T18:26:03.492869000 0.496181s info: Automatically using cache size of 193 MB
+2016-02-01T18:26:03.494002000 0.497314s notice: Listening for intracluster connections on port 29015
+2016-02-01T18:26:03.526325000 0.529584s notice: Listening for client driver connections on port 28015
+2016-02-01T18:26:03.526500000 0.529759s notice: Listening for administrative HTTP connections on port 8080
+2016-02-01T18:26:03.526502000 0.529761s notice: Listening on addresses: 127.0.0.1, ::1
+2016-02-01T18:26:03.526503000 0.529762s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2016-02-01T18:26:03.526504000 0.529763s notice: Server ready, "Marios_MBP_lan_hnj" 39411d25-27ab-40b9-a0ca-c18b98c4786c
+2016-02-01T18:26:04.681340000 1.684599s info: Table 3211a92e-6228-402f-b190-d4cb930b8cf6: Starting a new Raft election for term 2.
+2016-02-01T18:26:04.700205000 1.703465s info: Table 3211a92e-6228-402f-b190-d4cb930b8cf6: This server is Raft leader for term 2. Latest log index is 2.
+2016-02-01T18:26:05.187566000 2.190772s info: Table 50a16d6f-65bd-475e-896d-d5c774be6ac6: Starting a new Raft election for term 3.
+2016-02-01T18:26:05.196920000 2.200126s info: Table 50a16d6f-65bd-475e-896d-d5c774be6ac6: This server is Raft leader for term 3. Latest log index is 5.
+2016-02-01T19:44:02.640269000 4680.943027s info: Table f274ee60-c56f-4760-ae4d-a09fa077e60d: Added replica on this server.
+2016-02-01T19:44:03.951136000 4682.253893s info: Table f274ee60-c56f-4760-ae4d-a09fa077e60d: Starting a new Raft election for term 1.
+2016-02-01T19:44:03.981160000 4682.283917s info: Table f274ee60-c56f-4760-ae4d-a09fa077e60d: This server is Raft leader for term 1. Latest log index is 0.
+2016-02-01T20:51:15.244687000 8713.430566s notice: Removing file /Users/martimatix/Projects/sandbox/whats_better_phoenix/rethinkdb_data/3211a92e-6228-402f-b190-d4cb930b8cf6
+2016-02-01T20:51:15.244718000 8713.430596s info: Table 3211a92e-6228-402f-b190-d4cb930b8cf6: Deleted the table.
+2016-02-01T20:51:15.274143000 8713.460021s notice: Removing file /Users/martimatix/Projects/sandbox/whats_better_phoenix/rethinkdb_data/50a16d6f-65bd-475e-896d-d5c774be6ac6
+2016-02-01T20:51:15.274152000 8713.460030s info: Table 50a16d6f-65bd-475e-896d-d5c774be6ac6: Deleted the table.
+2016-02-01T22:34:55.300315000 13141.103162s notice: Server got SIGINT from pid 22657, uid 501; shutting down...
+2016-02-01T22:34:55.300582000 13141.103428s notice: Shutting down client connections...
+2016-02-01T22:34:55.310060000 13141.112906s notice: All client connections closed.
+2016-02-01T22:34:55.310075000 13141.112920s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2016-02-01T22:34:55.315742000 13141.118588s notice: Storage engine shut down.

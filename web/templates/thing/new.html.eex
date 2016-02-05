@@ -1,0 +1,6 @@
+<h2>New Thing</h2>
+
+<%= render "form.html", conn: @conn,
+                        action: thing_path(@conn, :create) %>
+
+<%= link "Back", to: thing_path(@conn, :index) %>
