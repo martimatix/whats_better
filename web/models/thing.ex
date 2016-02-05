@@ -1,4 +1,4 @@
-defmodule WhatsBetterPhoenix.Thing do
+defmodule WhatsBetter.Thing do
   defstruct id: nil, image: 'http://i.imgur.com/BHXY79g.jpg', category: nil
 
   require Logger
@@ -8,7 +8,7 @@ defmodule WhatsBetterPhoenix.Thing do
   alias RethinkDB.Record
   alias RethinkDB.Collection
 
-  def save(thing = %__MODULE__{}, db \\ WhatsBetterPhoenix.Database) do
+  def save(thing = %__MODULE__{}, db \\ WhatsBetter.Database) do
     data = %{
       id: thing.name,
       image: thing.image,
@@ -30,7 +30,7 @@ defmodule WhatsBetterPhoenix.Thing do
     end
   end
 
-  def get(id, db \\ WhatsBetterPhoenix.Database) do
+  def get(id, db \\ WhatsBetter.Database) do
     Logger.debug("getting #{inspect id}")
     %Record{ data: thing } =
       table("things")
@@ -39,7 +39,7 @@ defmodule WhatsBetterPhoenix.Thing do
     parse(thing)
   end
 
-  def get_all(db \\ WhatsBetterPhoenix.Database) do
+  def get_all(db \\ WhatsBetter.Database) do
     %Collection{ data: things } =
       table("things")
       |> RethinkDB.run(db)

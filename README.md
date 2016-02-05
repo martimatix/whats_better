@@ -1,4 +1,4 @@
-# WhatsBetterPhoenix
+# WhatsBetter
 
 To start your Phoenix app:
 

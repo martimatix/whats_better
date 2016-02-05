@@ -6,12 +6,12 @@
 use Mix.Config
 
 # Configures the endpoint
-config :whats_better_phoenix, WhatsBetterPhoenix.Endpoint,
+config :whats_better_phoenix, WhatsBetter.Endpoint,
   url: [host: "localhost"],
   root: Path.dirname(__DIR__),
   secret_key_base: "4x2bHg5arH+NnBVgjn0i8D/VwHfwgl/1dmj62sa4jnLjV6z4ythsjjQPf8VzZukx",
   render_errors: [accepts: ~w(html json)],
-  pubsub: [name: WhatsBetterPhoenix.PubSub,
+  pubsub: [name: WhatsBetter.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger

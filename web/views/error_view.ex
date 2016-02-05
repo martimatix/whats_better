@@ -1,5 +1,5 @@
-defmodule WhatsBetterPhoenix.ErrorView do
-  use WhatsBetterPhoenix.Web, :view
+defmodule WhatsBetter.ErrorView do
+  use WhatsBetter.Web, :view
 
   def render("404.html", _assigns) do
     "Page not found"

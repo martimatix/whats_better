@@ -1,7 +1,7 @@
-defmodule WhatsBetterPhoenix.Endpoint do
+defmodule WhatsBetter.Endpoint do
   use Phoenix.Endpoint, otp_app: :whats_better_phoenix
 
-  socket "/socket", WhatsBetterPhoenix.UserSocket
+  socket "/socket", WhatsBetter.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.
   #
@@ -35,5 +35,5 @@ defmodule WhatsBetterPhoenix.Endpoint do
     key: "_whats_better_phoenix_key",
     signing_salt: "9VIzbC7n"
 
-  plug WhatsBetterPhoenix.Router
+  plug WhatsBetter.Router
 end

@@ -1,7 +1,7 @@
-defmodule WhatsBetterPhoenix.ThingController do
-  use WhatsBetterPhoenix.Web, :controller
+defmodule WhatsBetter.ThingController do
+  use WhatsBetter.Web, :controller
 
-  alias WhatsBetterPhoenix.Thing
+  alias WhatsBetter.Thing
 
   require IEx
 

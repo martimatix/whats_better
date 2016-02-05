@@ -1,3 +1,3 @@
-defmodule WhatsBetterPhoenix.ThingView do
-  use WhatsBetterPhoenix.Web, :view
+defmodule WhatsBetter.ThingView do
+  use WhatsBetter.Web, :view
 end

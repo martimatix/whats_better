@@ -1,3 +1,3 @@
-defmodule WhatsBetterPhoenix.PageViewTest do
-  use WhatsBetterPhoenix.ConnCase, async: true
+defmodule WhatsBetter.PageViewTest do
+  use WhatsBetter.ConnCase, async: true
 end

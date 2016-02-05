@@ -1,12 +1,12 @@
-defmodule WhatsBetterPhoenix.Web do
+defmodule WhatsBetter.Web do
   @moduledoc """
   A module that keeps using definitions for controllers,
   views and so on.
 
   This can be used in your application as:
 
-      use WhatsBetterPhoenix.Web, :controller
-      use WhatsBetterPhoenix.Web, :view
+      use WhatsBetter.Web, :controller
+      use WhatsBetter.Web, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -26,8 +26,8 @@ defmodule WhatsBetterPhoenix.Web do
     quote do
       use Phoenix.Controller
 
-      import WhatsBetterPhoenix.Router.Helpers
-      import WhatsBetterPhoenix.Gettext
+      import WhatsBetter.Router.Helpers
+      import WhatsBetter.Gettext
     end
   end
 
@@ -41,9 +41,9 @@ defmodule WhatsBetterPhoenix.Web do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import WhatsBetterPhoenix.Router.Helpers
-      import WhatsBetterPhoenix.ErrorHelpers
-      import WhatsBetterPhoenix.Gettext
+      import WhatsBetter.Router.Helpers
+      import WhatsBetter.ErrorHelpers
+      import WhatsBetter.Gettext
     end
   end
 
@@ -56,7 +56,7 @@ defmodule WhatsBetterPhoenix.Web do
   def channel do
     quote do
       use Phoenix.Channel
-      import WhatsBetterPhoenix.Gettext
+      import WhatsBetter.Gettext
     end
   end
 

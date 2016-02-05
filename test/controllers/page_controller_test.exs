@@ -1,5 +1,5 @@
-defmodule WhatsBetterPhoenix.PageControllerTest do
-  use WhatsBetterPhoenix.ConnCase
+defmodule WhatsBetter.PageControllerTest do
+  use WhatsBetter.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get conn, "/"

@@ -1,3 +1,3 @@
-defmodule WhatsBetterPhoenix.LayoutViewTest do
-  use WhatsBetterPhoenix.ConnCase, async: true
+defmodule WhatsBetter.LayoutViewTest do
+  use WhatsBetter.ConnCase, async: true
 end

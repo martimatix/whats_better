@@ -1,4 +1,4 @@
-defmodule WhatsBetterPhoenix.ErrorHelpers do
+defmodule WhatsBetter.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -26,10 +26,10 @@ defmodule WhatsBetterPhoenix.ErrorHelpers do
     #
     #     dngettext "errors", "1 file", "%{count} files", count
     #
-    Gettext.dngettext(WhatsBetterPhoenix.Gettext, "errors", msg, msg, opts[:count], opts)
+    Gettext.dngettext(WhatsBetter.Gettext, "errors", msg, msg, opts[:count], opts)
   end
 
   def translate_error(msg) do
-    Gettext.dgettext(WhatsBetterPhoenix.Gettext, "errors", msg)
+    Gettext.dgettext(WhatsBetter.Gettext, "errors", msg)
   end
 end

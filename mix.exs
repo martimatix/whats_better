@@ -1,4 +1,4 @@
-defmodule WhatsBetterPhoenix.Mixfile do
+defmodule WhatsBetter.Mixfile do
   use Mix.Project
 
   def project do
@@ -16,7 +16,7 @@ defmodule WhatsBetterPhoenix.Mixfile do
   #
   # Type `mix help compile.app` for more information.
   def application do
-    [mod: {WhatsBetterPhoenix, []},
+    [mod: {WhatsBetter, []},
      applications: [:phoenix, :phoenix_html, :cowboy, :logger, :gettext]]
   end
 

@@ -1,5 +1,5 @@
-defmodule WhatsBetterPhoenix.PageController do
-  use WhatsBetterPhoenix.Web, :controller
+defmodule WhatsBetter.PageController do
+  use WhatsBetter.Web, :controller
 
   def index(conn, _params) do
     render conn, "index.html"
