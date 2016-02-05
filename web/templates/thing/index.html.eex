@@ -3,7 +3,7 @@
 <table class="table">
   <thead>
     <tr>
-      <th>Name (id)</th>
+      <th>Name</th>
       <th>Image url</th>
       <th>Category</th>
 
@@ -13,7 +13,7 @@
   <tbody>
 <%= for thing <- @things do %>
     <tr>
-      <td><%= thing.id %></td>
+      <td><%= thing.name %></td>
       <td><%= thing.image %></td>
       <td><%= thing.category %></td>
     </tr>

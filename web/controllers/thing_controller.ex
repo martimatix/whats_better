@@ -3,8 +3,6 @@ defmodule WhatsBetter.ThingController do
 
   alias WhatsBetter.Thing
 
-  require IEx
-
   def index(conn, _params ) do
     things = Thing.get_all
     render(conn, "index.html", things: things)
@@ -15,6 +13,9 @@ defmodule WhatsBetter.ThingController do
   end
 
   def create(conn, params) do
-    redirect conn, to: "/things"
+    thing_params = for {key, val} <- params["thing"], into: %{}, do: {String.to_atom(key), val}
+    thing = struct(Thing, thing_params)
+    Thing.save(thing)
+    redirect(conn, to: "/things")
   end
 end

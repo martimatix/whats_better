@@ -1,5 +1,5 @@
 defmodule WhatsBetter.Thing do
-  defstruct id: nil, image: 'http://i.imgur.com/BHXY79g.jpg', category: nil
+  defstruct id: nil, name: nil, image: nil, category: nil
 
   require Logger
 
@@ -10,14 +10,14 @@ defmodule WhatsBetter.Thing do
 
   def save(thing = %__MODULE__{}, db \\ WhatsBetter.Database) do
     data = %{
-      id: thing.name,
+      name: thing.name,
       image: thing.image,
       category: thing.category,
     }
     case thing.id do
       nil ->
         query =
-          table("thing")
+          table("things")
           |> insert(data)
         %Record{data: %{"generated_keys" => [id]}} = RethinkDB.run(query, db)
         %{thing | id: id}
@@ -49,6 +49,7 @@ defmodule WhatsBetter.Thing do
   def parse(thing) do
     %__MODULE__{
       id: thing["id"],
+      name: thing["name"],
       image: thing["image"],
       category: thing["category"],
     }

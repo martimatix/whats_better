@@ -93,3 +93,20 @@
 2016-02-06T08:50:38.793861000 2.015759s info: Table f274ee60-c56f-4760-ae4d-a09fa077e60d: Starting a new Raft election for term 2.
 2016-02-06T08:50:38.811406000 2.033303s info: Table f274ee60-c56f-4760-ae4d-a09fa077e60d: This server is Raft leader for term 2. Latest log index is 2.
 2016-02-06T08:50:39.155523000 2.377376s notice: A newer version of the RethinkDB server is available: 2.2.4. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2016-02-06T08:57:15.002791000 398.209077s notice: Server got SIGINT from pid 67778, uid 501; shutting down...
+2016-02-06T08:57:15.002976000 398.209261s notice: Shutting down client connections...
+2016-02-06T08:57:15.011282000 398.217568s notice: All client connections closed.
+2016-02-06T08:57:15.011300000 398.217585s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2016-02-06T08:57:15.016360000 398.222645s notice: Storage engine shut down.
+2016-02-06T08:58:27.445915000 0.400788s notice: Running rethinkdb 2.2.4 (CLANG 7.0.2 (clang-700.1.81))...
+2016-02-06T08:58:27.449939000 0.404810s notice: Running on Darwin 15.3.0 x86_64
+2016-02-06T08:58:27.449982000 0.404851s notice: Loading data from directory /Users/martimatix/Projects/sandbox/whats_better/rethinkdb_data
+2016-02-06T08:58:27.512121000 0.466990s info: Automatically using cache size of 1205 MB
+2016-02-06T08:58:27.513022000 0.467891s notice: Listening for intracluster connections on port 29015
+2016-02-06T08:58:27.525420000 0.480289s notice: Listening for client driver connections on port 28015
+2016-02-06T08:58:27.525592000 0.480461s notice: Listening for administrative HTTP connections on port 8080
+2016-02-06T08:58:27.525594000 0.480463s notice: Listening on addresses: 127.0.0.1, ::1
+2016-02-06T08:58:27.525595000 0.480464s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2016-02-06T08:58:27.525658000 0.480527s notice: Server ready, "Marios_MBP_lan_hnj" 39411d25-27ab-40b9-a0ca-c18b98c4786c
+2016-02-06T08:58:29.437189000 2.391971s info: Table f274ee60-c56f-4760-ae4d-a09fa077e60d: Starting a new Raft election for term 3.
+2016-02-06T08:58:29.488920000 2.443703s info: Table f274ee60-c56f-4760-ae4d-a09fa077e60d: This server is Raft leader for term 3. Latest log index is 5.

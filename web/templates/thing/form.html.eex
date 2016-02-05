@@ -1,17 +1,18 @@
-<%= form_for @conn, @action, [name: :thing], fn f -> %>
+<%= form_for @conn, @action, [as: :thing], fn f -> %>
   <div class="form-group">
-    <%= label f, :id, "id (name)", class: "control-label" %>
-    <%= text_input f, :url, class: "form-control" %>
+    <%= label f, :name, "name", class: "control-label" %>
+    <%= text_input f, :name, class: "form-control" %>
   </div>
 
   <div class="form-group">
     <%= label f, :image, "image", class: "control-label" %>
-    <%= text_input f, :title, class: "form-control" %>
+    <%= text_input f, :image, class: "form-control" %>
   </div>
 
+  <!-- Todo: change category into a dropdown -->
   <div class="form-group">
     <%= label f, :category, "category", class: "control-label" %>
-    <%= textarea f, :description, class: "form-control" %>
+    <%= text_input f, :category, class: "form-control" %>
   </div>
 
   <div class="form-group">
