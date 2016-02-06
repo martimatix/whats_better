@@ -1,4 +1,8 @@
 <h1>What's better?</h1>
 <h2><%= @first_thing.name %></h2>
+<h4>Category: <%= @first_thing.category %></h4>
+<img src="<%= @first_thing.image %>" alt="" />
 
 <h2><%= @second_thing.name %></h2>
+<h4>Category:  <%= @second_thing.category %></h4>
+<img src="<%= @second_thing.image %>" alt="" />
