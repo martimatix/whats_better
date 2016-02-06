@@ -11,7 +11,7 @@ defmodule WhatsBetter.Pair do
   # Find or create random pair
   # The more I think about this, the more I think this is not required.
   def random(db \\ WhatsBetter.Database) do
-    random_things = two_random_things
+    random_things = WhatsBetter.Thing.two_random
     pair_id = Enum.join(random_things)
     data = %{
       id: pair_id,
@@ -22,15 +22,6 @@ defmodule WhatsBetter.Pair do
     |> insert(data)
     |> RethinkDB.run(db)
     pair_id
-  end
-
-  def two_random_things(db \\ WhatsBetter.Database) do
-    table("things")
-    |> sample(2)
-    |> order_by("id")
-    |> map(lambda fn (thing) -> thing["id"] end)
-    |> RethinkDB.run(db)
-    |> Map.fetch!(:data)
   end
 
   def save(pair = %__MODULE__{}, db \\ WhatsBetter.Database) do

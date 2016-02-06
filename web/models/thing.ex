@@ -8,6 +8,14 @@ defmodule WhatsBetter.Thing do
   alias RethinkDB.Record
   alias RethinkDB.Collection
 
+  def get_two_random(db \\ WhatsBetter.Database) do
+    %Record{ data: things } =
+      table("things")
+      |> sample(2)
+      |> RethinkDB.run(db)
+    Enum.map(things, &parse/1)
+  end
+
   def save(thing = %__MODULE__{}, db \\ WhatsBetter.Database) do
     data = %{
       name: thing.name,
