@@ -4,7 +4,7 @@ defmodule WhatsBetter.Pair do
   require Logger
 
   import RethinkDB.Lambda
-  import RethinkDB.Query, except: [random: 0, random: 1]
+  import RethinkDB.Query, except: [get: 2, get: 1]
   alias RethinkDB.Record
   alias RethinkDB.Collection
 
