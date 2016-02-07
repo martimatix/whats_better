@@ -10,4 +10,9 @@ defmodule WhatsBetter.PageController do
       thing_1: thing_1,
       thing_2: thing_2
   end
+
+  def vote(conn, params) do
+    IO.inspect(params)
+    redirect(conn, to: "/")
+  end
 end
