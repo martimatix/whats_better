@@ -1,74 +1,42 @@
 defmodule WhatsBetter.Pair do
-  defstruct id: nil,
-            thing_1: %{ id: nil,
-                        votes: 0 },
-            thing_2: %{ id: nil,
-                        votes: 0 }
-
   require Logger
 
   import RethinkDB.Lambda
-  import RethinkDB.Query, except: [get: 2, get: 1]
+  import RethinkDB.Query
   alias RethinkDB.Record
   alias RethinkDB.Collection
 
-  # Find or create random pair
-  # The more I think about this, the more I think this is not required.
-  def random(db \\ WhatsBetter.Database) do
-    random_things = WhatsBetter.Thing.two_random
-    pair_id = Enum.join(random_things)
-    data = %{
-      id: pair_id,
-      things: random_things
-    }
-    # Todo: find a better way to upsert
-    table("pairs")
-    |> insert(data)
-    |> RethinkDB.run(db)
-    pair_id
-  end
-
-  def save(pair = %__MODULE__{}, db \\ WhatsBetter.Database) do
-    data = %{
-      things: pair.things,
-      votes: pair.votes,
-    }
-    case pair.id do
+  def vote(%{"thing_1" => thing_1_id, "thing_2" => thing_2_id, "vote" => selected_thing}, db \\ WhatsBetter.Database) do
+    pair_id = pair_id([thing_1_id, thing_2_id])
+    %Record{data: data} =
+      table("pairs")
+      |> get(pair_id)
+      |> RethinkDB.run(db)
+    case data do
       nil ->
-        query =
-          table("pairs")
-          |> insert(data)
-        %Record{data: %{"generated_keys" => [id]}} = RethinkDB.run(query, db)
-        %{pair | id: id}
-      x ->
         table("pairs")
-        |> RethinkDB.Query.get(x)
-        |> update(data)
+        |> insert(new_pair(pair_id, thing_1_id, thing_2_id, selected_thing))
         |> RethinkDB.run(db)
-        pair
+      %{"things" => %{^selected_thing => votes}} ->
+        table("pairs")
+        |> get(pair_id)
+        |> update(%{"things" => %{selected_thing => (votes + 1)}})
+        |> RethinkDB.run(db)
     end
   end
 
-  # def get(id, db \\ WhatsBetter.Database) do
-  #   Logger.debug("getting #{inspect id}")
-  #   %Record{ data: pair } =
-  #     table("pairs")
-  #     |> RethinkDB.Query.get(id)
-  #     |> RethinkDB.run(db)
-  #   parse(pair)
-  # end
+  defp new_pair(pair_id, thing_1_id, thing_2_id, selected_thing) do
+    %{ "id" => pair_id,
+       "things" => %{thing_1_id => 0,
+                     thing_2_id => 0 }
+    }
+    |> put_in(["things", selected_thing], 1)
+  end
 
-  # def get_all(db \\ WhatsBetter.Database) do
-  #   %Collection{ data: things } =
-  #     table("pairs")
-  #     |> RethinkDB.run(db)
-  #   Enum.map(things, &parse/1)
-  # end
-
-  # def parse(pair) do
-  #   %__MODULE__{
-  #     things: pair["things"],
-  #     votes: pair["votes"],
-  #   }
-  # end
+  # No need to use pair_id and use regular id if you take advanage of `has_fields`
+  defp pair_id(things) do
+    things
+    |> Enum.sort
+    |> Enum.join
+  end
 end

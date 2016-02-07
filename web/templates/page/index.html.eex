@@ -1,14 +1,16 @@
 <h1>What's better?</h1>
-<%= form_for @conn, "vote", [as: :vote], fn f -> %>
+<%= form_for @conn, "vote", [as: :ballot], fn f -> %>
   <h2><%= @thing_1.name %></h2>
   <h4>Category: <%= @thing_1.category %></h4>
   <img src="<%= @thing_1.image %>" alt="" />
-  <%= radio_button f, :vote, "thing_1" %>
+  <%= hidden_input f, :thing_1, value: @thing_1.id %>
+  <%= radio_button f, :vote, @thing_1.id  %>
 
   <h2><%= @thing_2.name %></h2>
   <h4>Category:  <%= @thing_2.category %></h4>
   <img src="<%= @thing_2.image %>" alt="" />
-  <%= radio_button f, :vote, "thing_2" %>
+  <%= hidden_input f, :thing_2, value: @thing_2.id %>
+  <%= radio_button f, :vote, @thing_2.id  %>
 
   <%= submit "Submit" %>
 <%= end %>

@@ -2,6 +2,7 @@ defmodule WhatsBetter.PageController do
   use WhatsBetter.Web, :controller
 
   alias WhatsBetter.Thing
+  alias WhatsBetter.Pair
 
   def index(conn, _params) do
     [thing_1, thing_2] = Thing.get_two_random
@@ -12,7 +13,7 @@ defmodule WhatsBetter.PageController do
   end
 
   def vote(conn, params) do
-    IO.inspect(params)
+    Pair.vote(params["ballot"])
     redirect(conn, to: "/")
   end
 end
