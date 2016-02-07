@@ -4,10 +4,10 @@ defmodule WhatsBetter.PageController do
   alias WhatsBetter.Thing
 
   def index(conn, _params) do
-    [first_thing, second_thing] = Thing.get_two_random
+    [thing_1, thing_2] = Thing.get_two_random
 
     render conn, "index.html",
-      first_thing: first_thing,
-      second_thing: second_thing
+      thing_1: thing_1,
+      thing_2: thing_2
   end
 end

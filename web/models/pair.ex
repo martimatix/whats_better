@@ -1,9 +1,9 @@
 defmodule WhatsBetter.Pair do
   defstruct id: nil,
-            first_thing: %{ id: nil,
-                            votes: 0 },
-            second_thing: %{ id: nil,
-                            votes: 0 }
+            thing_1: %{ id: nil,
+                        votes: 0 },
+            thing_2: %{ id: nil,
+                        votes: 0 }
 
   require Logger
 
