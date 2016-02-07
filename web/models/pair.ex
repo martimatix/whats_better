@@ -1,5 +1,9 @@
 defmodule WhatsBetter.Pair do
-  defstruct id: nil, things: [], votes: []
+  defstruct id: nil,
+            first_thing: %{ id: nil,
+                            votes: 0 },
+            second_thing: %{ id: nil,
+                            votes: 0 }
 
   require Logger
 
@@ -61,10 +65,10 @@ defmodule WhatsBetter.Pair do
   #   Enum.map(things, &parse/1)
   # end
 
-  def parse(pair) do
-    %__MODULE__{
-      things: pair["things"],
-      votes: pair["votes"],
-    }
-  end
+  # def parse(pair) do
+  #   %__MODULE__{
+  #     things: pair["things"],
+  #     votes: pair["votes"],
+  #   }
+  # end
 end
