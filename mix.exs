@@ -17,7 +17,7 @@ defmodule WhatsBetter.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {WhatsBetter, []},
-     applications: [:phoenix, :phoenix_html, :cowboy, :logger, :gettext]]
+     applications: [:phoenix, :phoenix_html, :cowboy, :logger, :gettext, :comeonin]]
   end
 
   # Specifies which paths to compile per environment.
@@ -33,6 +33,7 @@ defmodule WhatsBetter.Mixfile do
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.9"},
      {:rethinkdb, github: "hamiltop/rethinkdb-elixir"},
-     {:cowboy, "~> 1.0"}]
+     {:cowboy, "~> 1.0"},
+     {:comeonin, "~> 2.1.0"}]
   end
 end

@@ -17,6 +17,7 @@ defmodule WhatsBetter.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    resources "/users", UserController
     post "/vote", PageController, :vote
     resources "/things", ThingController
   end

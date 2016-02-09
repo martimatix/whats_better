@@ -1,5 +1,5 @@
 defmodule WhatsBetter.User do
-  defstruct id: nil, name: nil, email: nil, password_hash: nil
+  defstruct id: nil, name: nil, email: nil, password: nil, password_hash: nil
 
   require Logger
 
@@ -12,7 +12,7 @@ defmodule WhatsBetter.User do
     data = %{
       name: user.name,
       email: user.email,
-      password_hash: user.password_hash,
+      password_hash: Comeonin.Bcrypt.hashpwsalt(user.password),
     }
     case user.id do
       nil ->
