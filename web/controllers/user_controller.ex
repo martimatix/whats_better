@@ -9,8 +9,11 @@ defmodule WhatsBetter.UserController do
 
   def create(conn, params) do
     user_params = for {key, val} <- params["user"], into: %{}, do: {String.to_atom(key), val}
-    user = struct(User, user_params)
-    User.save(user)
-    redirect(conn, to: "/")
+    # TODO: improve on pattern below - hard to read
+    user = User.save(struct(User, user_params))
+    conn
+    |> WhatsBetter.Auth.login(user)
+    |> put_flash(:info, "#{user.name} created!")
+    |> redirect(to: "/")
   end
 end

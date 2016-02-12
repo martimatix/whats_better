@@ -1,16 +1,11 @@
 defmodule WhatsBetter.ThingController do
   use WhatsBetter.Web, :controller
-
+  plug :authenticate when action in [:index, :new]
   alias WhatsBetter.Thing
 
   def index(conn, _params ) do
-    case authenticate(conn) do
-      %Plug.Conn{halted: true} = conn ->
-        conn
-      conn ->
-        things = Thing.get_all
-        render(conn, "index.html", things: things)
-    end
+    things = Thing.get_all
+    render(conn, "index.html", things: things)
   end
 
   def new(conn, _params) do
@@ -24,7 +19,7 @@ defmodule WhatsBetter.ThingController do
     redirect(conn, to: "/things")
   end
 
-  defp authenticate(conn) do
+  defp authenticate(conn, _opts) do
     if conn.assigns.current_user do
       conn
     else
