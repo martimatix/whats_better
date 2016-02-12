@@ -136,3 +136,19 @@
 2016-02-09T21:34:15.338065000 67651.280320s info: Table 51e4da7c-e932-4e23-b013-627af21dd48f: Added replica on this server.
 2016-02-09T21:34:16.473891000 67652.416098s info: Table 51e4da7c-e932-4e23-b013-627af21dd48f: Starting a new Raft election for term 1.
 2016-02-09T21:34:16.516061000 67652.458269s info: Table 51e4da7c-e932-4e23-b013-627af21dd48f: This server is Raft leader for term 1. Latest log index is 0.
+2016-02-12T19:06:09.257093000 0.436109s notice: Running rethinkdb 2.2.4 (CLANG 7.0.2 (clang-700.1.81))...
+2016-02-12T19:06:09.262420000 0.441432s notice: Running on Darwin 15.3.0 x86_64
+2016-02-12T19:06:09.262462000 0.441473s notice: Loading data from directory /Users/martimatix/Projects/sandbox/whats_better/rethinkdb_data
+2016-02-12T19:06:09.306361000 0.485372s info: Automatically using cache size of 1543 MB
+2016-02-12T19:06:09.307362000 0.486373s notice: Listening for intracluster connections on port 29015
+2016-02-12T19:06:09.345944000 0.524955s notice: Listening for client driver connections on port 28015
+2016-02-12T19:06:09.346201000 0.525212s notice: Listening for administrative HTTP connections on port 8080
+2016-02-12T19:06:09.346205000 0.525216s notice: Listening on addresses: 127.0.0.1, ::1
+2016-02-12T19:06:09.346207000 0.525217s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2016-02-12T19:06:09.346220000 0.525231s notice: Server ready, "Marios_MBP_lan_hnj" 39411d25-27ab-40b9-a0ca-c18b98c4786c
+2016-02-12T19:06:10.610999000 1.789958s info: Table 51e4da7c-e932-4e23-b013-627af21dd48f: Starting a new Raft election for term 2.
+2016-02-12T19:06:10.620819000 1.799778s info: Table 51e4da7c-e932-4e23-b013-627af21dd48f: This server is Raft leader for term 2. Latest log index is 2.
+2016-02-12T19:06:10.976698000 2.155657s info: Table f274ee60-c56f-4760-ae4d-a09fa077e60d: Starting a new Raft election for term 5.
+2016-02-12T19:06:10.986362000 2.165321s info: Table f274ee60-c56f-4760-ae4d-a09fa077e60d: This server is Raft leader for term 5. Latest log index is 11.
+2016-02-12T19:06:11.138905000 2.317864s info: Table afa3e38b-1eb1-4164-b35b-d8ce33ff7571: Starting a new Raft election for term 3.
+2016-02-12T19:06:11.147793000 2.326752s info: Table afa3e38b-1eb1-4164-b35b-d8ce33ff7571: This server is Raft leader for term 3. Latest log index is 5.

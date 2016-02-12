@@ -4,8 +4,13 @@ defmodule WhatsBetter.ThingController do
   alias WhatsBetter.Thing
 
   def index(conn, _params ) do
-    things = Thing.get_all
-    render(conn, "index.html", things: things)
+    case authenticate(conn) do
+      %Plug.Conn{halted: true} = conn ->
+        conn
+      conn ->
+        things = Thing.get_all
+        render(conn, "index.html", things: things)
+    end
   end
 
   def new(conn, _params) do
@@ -17,5 +22,16 @@ defmodule WhatsBetter.ThingController do
     thing = struct(Thing, thing_params)
     Thing.save(thing)
     redirect(conn, to: "/things")
+  end
+
+  defp authenticate(conn) do
+    if conn.assigns.current_user do
+      conn
+    else
+      conn
+      |> put_flash(:error, "You must be logged in to access that page")
+      |> redirect(to: page_path(conn, :index))
+      |> halt()
+    end
   end
 end
