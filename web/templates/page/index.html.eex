@@ -1,16 +1,35 @@
-<h1>What's better?</h1>
+<div class="text-center">
+  <h1>What's better?</h1>
+  <p>
+    Click on the picture of the item you think is better and hit submit.
+  </p>
+</div>
+
 <%= form_for @conn, "vote", [as: :ballot], fn f -> %>
-  <h2><%= @thing_1.name %></h2>
-  <h4>Category: <%= @thing_1.category %></h4>
-  <img src="<%= @thing_1.image %>" alt="" />
-  <%= hidden_input f, :thing_1, value: @thing_1.id %>
-  <%= radio_button f, :vote, @thing_1.id  %>
-
-  <h2><%= @thing_2.name %></h2>
-  <h4>Category:  <%= @thing_2.category %></h4>
-  <img src="<%= @thing_2.image %>" alt="" />
-  <%= hidden_input f, :thing_2, value: @thing_2.id %>
-  <%= radio_button f, :vote, @thing_2.id  %>
-
-  <%= submit "Submit" %>
+  <div class="row">
+    <div class="col-xs-12 col-sm-6">
+      <label>
+        <h2><%= @thing_1.name %></h2>
+        <h4>Category: <%= @thing_1.category %></h4>
+        <img src="<%= @thing_1.image %>" alt="" class="img-responsive" />
+        <%= hidden_input f, :thing_1, value: @thing_1.id %>
+        <%= radio_button f, :vote, @thing_1.id  %>
+      </label>
+    </div>
+    <div class="col-xs-12 hidden-sm hidden-md hidden-lg text-center">
+      <h2>OR</h2>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+      <label>
+        <h2><%= @thing_2.name %></h2>
+        <h4>Category:  <%= @thing_2.category %></h4>
+        <img src="<%= @thing_2.image %>" alt="" class="img-responsive" />
+        <%= hidden_input f, :thing_2, value: @thing_2.id %>
+        <%= radio_button f, :vote, @thing_2.id  %>
+      </label>
+    </div>
+  </div>
+  <div class="text-center">
+    <%= submit "Submit", class: "btn btn-primary" %>
+  </div>
 <%= end %>
