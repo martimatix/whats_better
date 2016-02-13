@@ -1,5 +1,6 @@
 defmodule WhatsBetter.Auth do
   import Plug.Conn
+  import Comeonin.Bcrypt, only: [checkpw: 2, dummy_checkpw: 0]
   alias WhatsBetter.User
 
   def init(opts) do
@@ -17,5 +18,19 @@ defmodule WhatsBetter.Auth do
     |> assign(:current_user, user)
     |> put_session(:user_id, user.id)
     |> configure_session(renew: true)
+  end
+
+  def login_by_email_and_pass(conn, email, given_pass) do
+    # TODO: is it worth adding arguments to get rather than writing custom methods?
+    user = User.get_by_email(email)
+    cond do
+      user && checkpw(given_pass, user.password_hash) ->
+        {:ok, login(conn, user)}
+      user ->
+        {:error, :unauthorized, conn}
+      true ->
+        dummy_checkpw()
+        {:error, :not_found, conn}
+    end
   end
 end

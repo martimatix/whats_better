@@ -46,12 +46,22 @@ defmodule WhatsBetter.User do
     Enum.map(users, &parse/1)
   end
 
+  def get_by_email(email, db \\ WhatsBetter.Database) do
+    Logger.debug("getting #{inspect email}")
+    %Record{ data: user } =
+      table("users")
+      |> filter(%{email: email})
+      |> nth(0)
+      |> RethinkDB.run(db)
+    parse(user)
+  end
+
   def parse(user) do
     %__MODULE__{
       id: user["id"],
       name: user["name"],
-      email: user["image"],
-      password_hash: user["category"],
+      email: user["email"],
+      password_hash: user["password_hash"],
     }
   end
 end
