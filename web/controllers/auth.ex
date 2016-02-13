@@ -1,7 +1,9 @@
 defmodule WhatsBetter.Auth do
   import Plug.Conn
   import Comeonin.Bcrypt, only: [checkpw: 2, dummy_checkpw: 0]
+  import Phoenix.Controller
   alias WhatsBetter.User
+  alias WhatsBetter.Router.Helpers
 
   def init(opts) do
     opts
@@ -31,6 +33,21 @@ defmodule WhatsBetter.Auth do
       true ->
         dummy_checkpw()
         {:error, :not_found, conn}
+    end
+  end
+
+  def logout(conn) do
+    configure_session(conn, drop: true)
+  end
+
+  def authenticate_user(conn, _opts) do
+    if conn.assigns.current_user do
+      conn
+    else
+      conn
+      |> put_flash(:error, "You must be logged in to access that page")
+      |> redirect(to: "/")
+      |> halt()
     end
   end
 end

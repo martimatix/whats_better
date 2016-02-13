@@ -20,5 +20,5 @@ defmodule WhatsBetter.Gettext do
 
   See the [Gettext Docs](http://hexdocs.pm/gettext) for detailed usage.
   """
-  use Gettext, otp_app: :whats_better_phoenix
+  use Gettext, otp_app: :whats_better
 end

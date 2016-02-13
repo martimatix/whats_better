@@ -1,6 +1,6 @@
 defmodule WhatsBetter.ThingController do
   use WhatsBetter.Web, :controller
-  plug :authenticate when action in [:index, :new]
+  plug :authenticate_user when action in [:index, :new]
   alias WhatsBetter.Thing
 
   def index(conn, _params ) do
@@ -17,16 +17,5 @@ defmodule WhatsBetter.ThingController do
     thing = struct(Thing, thing_params)
     Thing.save(thing)
     redirect(conn, to: "/things")
-  end
-
-  defp authenticate(conn, _opts) do
-    if conn.assigns.current_user do
-      conn
-    else
-      conn
-      |> put_flash(:error, "You must be logged in to access that page")
-      |> redirect(to: page_path(conn, :index))
-      |> halt()
-    end
   end
 end

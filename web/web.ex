@@ -28,6 +28,7 @@ defmodule WhatsBetter.Web do
 
       import WhatsBetter.Router.Helpers
       import WhatsBetter.Gettext
+      import WhatsBetter.Auth, only: [authenticate_user: 2]
     end
   end
 

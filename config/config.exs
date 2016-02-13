@@ -6,7 +6,7 @@
 use Mix.Config
 
 # Configures the endpoint
-config :whats_better_phoenix, WhatsBetter.Endpoint,
+config :whats_better, WhatsBetter.Endpoint,
   url: [host: "localhost"],
   root: Path.dirname(__DIR__),
   secret_key_base: "4x2bHg5arH+NnBVgjn0i8D/VwHfwgl/1dmj62sa4jnLjV6z4ythsjjQPf8VzZukx",

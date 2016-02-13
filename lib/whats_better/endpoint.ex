@@ -1,5 +1,5 @@
 defmodule WhatsBetter.Endpoint do
-  use Phoenix.Endpoint, otp_app: :whats_better_phoenix
+  use Phoenix.Endpoint, otp_app: :whats_better
 
   socket "/socket", WhatsBetter.UserSocket
 
@@ -8,7 +8,7 @@ defmodule WhatsBetter.Endpoint do
   # You should set gzip to true if you are running phoenix.digest
   # when deploying your static files in production.
   plug Plug.Static,
-    at: "/", from: :whats_better_phoenix, gzip: false,
+    at: "/", from: :whats_better, gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
   # Code reloading can be explicitly enabled under the
@@ -32,7 +32,7 @@ defmodule WhatsBetter.Endpoint do
 
   plug Plug.Session,
     store: :cookie,
-    key: "_whats_better_phoenix_key",
+    key: "_whats_better_key",
     signing_salt: "9VIzbC7n"
 
   plug WhatsBetter.Router
