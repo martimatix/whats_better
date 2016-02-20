@@ -3,8 +3,7 @@ defmodule WhatsBetter.PairController do
   alias WhatsBetter.Pair
 
   def show(conn, %{"id" => id}) do
-    IO.puts "hitting here"
-    pair = Pair.get(id)
-    render conn, "show.html", pair: pair
+    things = Pair.get_things_with_votes(id)
+    render conn, "show.html", things: things
   end
 end

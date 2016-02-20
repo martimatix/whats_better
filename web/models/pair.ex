@@ -23,9 +23,21 @@ defmodule WhatsBetter.Pair do
         |> update(%{"things" => update_votes(things, selected_thing) })
         |> RethinkDB.run(db)
     end
+    pair_id
   end
 
-  defp new_pair(pair_id, thing_1_id, thing_2_id, selected_thing) do
+  def get_things_with_votes(pair_id, db \\ WhatsBetter.Database) do
+    table("pairs")
+    |> get(pair_id)
+    |> get_field("things")
+    |> eq_join("id", table("things"))
+    |> without(%{right: "id"})
+    |> zip
+    |> RethinkDB.run(db)
+    |> Map.get(:data)
+  end
+
+  def new_pair(pair_id, thing_1_id, thing_2_id, selected_thing) do
     %{ "id" => pair_id,
        "things" => [%{ "id"    => thing_1_id,
                        "votes" => score(thing_1_id, selected_thing) },
@@ -38,11 +50,14 @@ defmodule WhatsBetter.Pair do
     if selected_thing == thing, do: 1, else: 0
   end
 
+  #TODO: Update the votes without rewriting the entire array
   defp update_votes(things, selected_thing) do
     Enum.map(things, fn(thing) ->
       case thing do
-        %{"id" => selected_thing} ->
+        %{"id" => ^selected_thing} ->
           Map.put(thing, "votes", thing["votes"] + 1)
+        _ ->
+          thing
         end
       end)
     end

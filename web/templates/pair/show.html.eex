@@ -1,7 +1,21 @@
 <div class="row">
-  <p>
-    <%= for thing <- @pair.things do %>
-      <%= elem(thing, 0) %>
-    <% end %>
-  </p>
+  <%= for thing <- @things do %>
+    <div class="col-xs-12 col-sm-6 text-center thing">
+      <h2>
+        <%= thing["name"] %>
+      </h2>
+      <h4>
+        <!-- TODO: Update this to wins against other thing -->
+        Votes: <%= thing["votes"] %>
+      </h4>
+      <p>
+        <img src="<%= thing["image"] %>">
+      </p>
+    </div>
+  <% end %>
+</div>
+<div class="text-center">
+  <h3>
+    <%= link "New pair", to: "/" %>
+  </h3>
 </div>

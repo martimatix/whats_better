@@ -13,7 +13,7 @@ defmodule WhatsBetter.PageController do
   end
 
   def vote(conn, params) do
-    Pair.vote(params["ballot"])
-    redirect(conn, to: "/")
+    pair_id = Pair.vote(params["ballot"])
+    redirect(conn, to: pair_path(conn, :show, pair_id))
   end
 end
