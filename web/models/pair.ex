@@ -17,23 +17,33 @@ defmodule WhatsBetter.Pair do
         table("pairs")
         |> insert(new_pair(pair_id, thing_1_id, thing_2_id, selected_thing))
         |> RethinkDB.run(db)
-      %{"things" => %{^selected_thing => votes}} ->
+      %{"thingOne" => %{"id" => ^selected_thing, "votes" => votes}} ->
         table("pairs")
         |> get(pair_id)
-        |> update(%{"things" => %{selected_thing => (votes + 1)}})
+        |> update(%{"thingOne" => %{"votes" => votes + 1}})
+        |> RethinkDB.run(db)
+      %{"thingTwo" => %{"id" => ^selected_thing, "votes" => votes}} ->
+        table("pairs")
+        |> get(pair_id)
+        |> update(%{"thingTwo" => %{"votes" => votes + 1}})
         |> RethinkDB.run(db)
     end
   end
 
   defp new_pair(pair_id, thing_1_id, thing_2_id, selected_thing) do
     %{ "id" => pair_id,
-       "things" => %{thing_1_id => 0,
-                     thing_2_id => 0 }
+       "thingOne" => %{ "id"    => thing_1_id,
+                        "votes" => score(thing_1_id, selected_thing) },
+       "thingTwo" => %{ "id"    => thing_2_id,
+                        "votes" => score(thing_2_id, selected_thing) }
     }
-    |> put_in(["things", selected_thing], 1)
   end
 
-  # No need to use pair_id and use regular id if you take advanage of `has_fields`
+  defp score(thing, selected_thing) do
+    if selected_thing == thing, do: 1, else: 0
+  end
+
+  # TODO: No need to use pair_id and use regular id if you take advanage of `has_fields`
   defp pair_id(things) do
     things
     |> Enum.sort
