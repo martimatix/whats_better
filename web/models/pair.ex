@@ -30,6 +30,20 @@ defmodule WhatsBetter.Pair do
     end
   end
 
+  def get_things_with_votes(pair_id, db \\ WhatsBetter.Database) do
+    #TODO: Is there a nicer way to merge the votes into things?
+    %Record{data: %{ "thingOne" => %{"id" => thing_1_id, "votes" => thing_1_votes},
+                     "thingTwo" => %{"id" => thing_2_id, "votes" => thing_2_votes}}
+                   } =
+      table("pairs")
+      |> get(pair_id)
+      |> RethinkDB.run(db)
+    %Collection{data: things_data} =
+      table("things")
+      |> get_all([thing_1_id, thing_2_id])
+      |> RethinkDB.run(db)
+  end
+
   defp new_pair(pair_id, thing_1_id, thing_2_id, selected_thing) do
     %{ "id" => pair_id,
        "thingOne" => %{ "id"    => thing_1_id,
