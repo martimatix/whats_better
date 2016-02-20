@@ -23,6 +23,7 @@ defmodule WhatsBetter.Router do
     resources "/sessions", SessionController, only: [:new, :create, :delete]
     post "/vote", PageController, :vote
     resources "/things", ThingController
+    resources "/pairs", PairController
   end
 
   # Other scopes may use custom stacks.

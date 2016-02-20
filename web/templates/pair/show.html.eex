@@ -1,0 +1,7 @@
+<div class="row">
+  <p>
+    <%= for thing <- @pair.things do %>
+      <%= elem(thing, 0) %>
+    <% end %>
+  </p>
+</div>
