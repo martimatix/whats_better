@@ -45,8 +45,8 @@ defmodule WhatsBetter.Auth do
       conn
     else
       conn
-      |> put_flash(:error, "You must be logged in to access that page")
-      |> redirect(to: "/")
+      |> put_flash(:error, "You must be logged in to do that")
+      |> redirect(to: "/sessions/new")
       |> halt()
     end
   end

@@ -1,7 +1,8 @@
 defmodule WhatsBetter.ThingController do
   use WhatsBetter.Web, :controller
-  plug :authenticate_user when action in [:index, :new]
   alias WhatsBetter.Thing
+  
+  plug :authenticate_user when action in [:index, :new]
 
   def index(conn, _params ) do
     things = Thing.get_all
