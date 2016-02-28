@@ -19,3 +19,4 @@
     <%= link "New pair", to: "/" %>
   </h3>
 </div>
+<div id="comments-container"></div>
