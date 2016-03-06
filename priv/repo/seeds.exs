@@ -1,4 +1,4 @@
-# To run: > mix run priv/repo/seeds.exs
+# To run: $ mix run priv/repo/seeds.exs
 # More info: http://stackoverflow.com/questions/32606515/how-to-pre-populate-database-on-a-phoenix-application-start-up
 
 alias WhatsBetter.Thing

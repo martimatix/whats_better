@@ -8,6 +8,9 @@
         <!-- TODO: Update this to wins against other thing -->
         Votes: <%= thing["votes"] %>
       </h4>
+      <h4>
+        Score: <%= round(thing["score"]) %>
+      </h4>
       <p>
         <img src="<%= thing["image"] %>">
       </p>

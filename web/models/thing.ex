@@ -1,5 +1,5 @@
 defmodule WhatsBetter.Thing do
-  defstruct id: nil, name: nil, image: nil, category: nil
+  defstruct id: nil, name: nil, image: nil, category: nil, score: 0
 
   require Logger
 
@@ -21,6 +21,7 @@ defmodule WhatsBetter.Thing do
       name: thing.name,
       image: thing.image,
       category: thing.category,
+      score: thing.score,
     }
     case thing.id do
       nil ->
@@ -60,6 +61,7 @@ defmodule WhatsBetter.Thing do
       name: thing["name"],
       image: thing["image"],
       category: thing["category"],
+      score: thing["score"],
     }
   end
 end
