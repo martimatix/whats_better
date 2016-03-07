@@ -5,28 +5,26 @@
   </p>
 </div>
 
-<%= form_for @conn, "vote", [as: :ballot], fn f -> %>
   <div class="row">
     <div class="col-xs-12 col-sm-6 text-center">
-      <label class="thing">
+      <%= form_for @conn, "vote", [as: :ballot], fn f -> %>
         <h2><%= @thing_1.name %></h2>
         <h4>Category: <%= @thing_1.category %></h4>
-        <%= radio_button f, :vote, @thing_1.id  %>
-        <img src="<%= @thing_1.image %>" alt="" class="img-responsive" />
+        <!-- <img src="<%= @thing_1.image %>" alt="" class="img-responsive" /> -->
         <%= hidden_input f, :thing_1, value: @thing_1.id %>
-      </label>
+        <%= hidden_input f, :thing_2, value: @thing_2.id %>
+        <%= hidden_input f, :vote, value: @thing_1.id %>
+        <input type="image" src="<%= @thing_1.image %>" alt="<%= "#{@thing_1.name} - submit" %>" class="thing-submit" />
+      <%= end %>
     </div>
     <div class="col-xs-12 col-sm-6 text-center">
-      <label class="thing">
+      <%= form_for @conn, "vote", [as: :ballot], fn f -> %>
         <h2><%= @thing_2.name %></h2>
         <h4>Category:  <%= @thing_2.category %></h4>
-        <%= radio_button f, :vote, @thing_2.id  %>
-        <img src="<%= @thing_2.image %>" alt="" class="img-responsive" />
+        <%= hidden_input f, :thing_1, value: @thing_1.id %>
         <%= hidden_input f, :thing_2, value: @thing_2.id %>
-      </label>
+        <%= hidden_input f, :vote, value: @thing_2.id %>
+        <input type="image" src="<%= @thing_2.image %>" alt="<%= "#{@thing_2.name} - submit" %>" />
+      <%= end %>
     </div>
   </div>
-  <div class="thing-submit text-center">
-    <%= submit "Submit", class: "btn btn-primary btn-lg" %>
-  </div>
-<%= end %>

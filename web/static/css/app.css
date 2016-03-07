@@ -63,30 +63,8 @@ form.link, form.button {
   }
 }
 
-.thing > input{ /* HIDE RADIO */
-  visibility: hidden; /* Makes input not-clickable */
-  position: absolute; /* Remove input from document flow */
-}
-
-.thing > input + img{ /* IMAGE STYLES */
-  cursor:pointer;
-  border:3px solid transparent;
-}
-
-.thing > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
-  border:3px solid #d20300;
-}
-
-.thing-submit {
-  margin-top: 3em;
-}
-
-.thing img {
+.thing img, input[type="image"] {
   max-height: 40vh;
-}
-
-.or {
-  color: red;
 }
 
 @media (max-width: 768px) {
