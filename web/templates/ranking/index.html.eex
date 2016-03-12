@@ -1,0 +1,66 @@
+<div class="text-center">
+  <h1>Best & Worst</h1>
+</div>
+<div class="row">
+  <div class="col-sm-6">
+    <h3>Best things in the world</h3>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th class="rank-header">Rank</th>
+          <th>Item</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= for thing <- @best_things do %>
+        <tr>
+          <td><%= thing.rank %></td>
+          <td><%= link thing.name, to: thing_path(@conn, :show, thing.id) %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <h3>Worst things in the world</h3>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th class="rank-header">Rank</th>
+          <th>Item</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= for thing <- @worst_things do %>
+        <tr>
+          <td><%= thing.rank %></td>
+          <td><%= link thing.name, to: thing_path(@conn, :show, thing.id) %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-sm-6">
+    <div id="disqus_thread"></div>
+    <!-- TODO: Move this into a snippet and configure stuff in the comments -->
+    <script>
+    /**
+    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+
+    s.src = '//whats-better.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </div>
+</div>

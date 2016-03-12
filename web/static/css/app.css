@@ -72,3 +72,7 @@ form.link, form.button {
     margin-top: 20px;
   }
 }
+
+.rank-header {
+  width: 5em;
+}

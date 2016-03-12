@@ -24,6 +24,7 @@ defmodule WhatsBetter.Router do
     post "/vote", PageController, :vote
     resources "/things", ThingController
     resources "/pairs", PairController
+    resources "/rankings", RankingController, only: [:index]
   end
 
   # Other scopes may use custom stacks.
