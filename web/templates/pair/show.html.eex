@@ -17,11 +17,6 @@
     </div>
   <% end %>
 </div>
-<div class="text-center">
-  <h3>
-    <%= link "New pair", to: "/" %>
-  </h3>
-</div>
 <div id="disqus_thread"></div>
 <!-- TODO: Move this into a snippet and configure stuff in the comments -->
 <script>
