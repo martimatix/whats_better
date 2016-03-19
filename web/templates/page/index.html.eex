@@ -1,4 +1,17 @@
 <div class="row">
+  <div class="col-sm-4">
+    <p>
+      <%= case @previous_things do %>
+        <%= :no_previous_pair -> %>
+          <%=  render(WhatsBetter.RankingView, "index.html", best_things: @best_things, worst_things: @worst_things, conn: @conn) %>
+        <%= _ -> %>
+          <div class="text-center">
+            <h1>Previous Pair</h1>
+          </div>
+          <%= render(WhatsBetter.PairView, "show.html", things: @previous_things, pair_id: @pair_id) %>
+      <%= end %>
+    </p>
+  </div>
   <div class="col-sm-8">
     <div class="text-center">
       <h1>What's better?</h1>
@@ -29,18 +42,5 @@
         <%= end %>
       </div>
     </div>
-  </div>
-  <div class="col-sm-4">
-    <p>
-      <%= case @previous_things do %>
-        <%= :no_previous_pair -> %>
-          <%=  render(WhatsBetter.RankingView, "index.html", best_things: @best_things, worst_things: @worst_things, conn: @conn) %>
-        <%= _ -> %>
-          <div class="text-center">
-            <h1>Previous Pair</h1>
-          </div>
-          <%= render(WhatsBetter.PairView, "show.html", things: @previous_things, pair_id: @pair_id) %>
-      <%= end %>
-    </p>
   </div>
 </div>
