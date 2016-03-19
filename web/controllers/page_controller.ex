@@ -31,4 +31,8 @@ defmodule WhatsBetter.PageController do
     pair_id = Pair.vote(params["ballot"])
     redirect(conn, to: page_path(conn, :index, pair_id: pair_id))
   end
+
+  def recent_comments(conn, _params) do
+    render conn, "recent_comments.html"
+  end
 end

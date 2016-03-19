@@ -25,6 +25,7 @@ defmodule WhatsBetter.Router do
     resources "/things", ThingController
     resources "/pairs", PairController
     resources "/rankings", RankingController, only: [:index]
+    get "/recent_comments", PageController, :recent_comments
   end
 
   # Other scopes may use custom stacks.
