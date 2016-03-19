@@ -4,12 +4,13 @@ defmodule WhatsBetter.PageController do
   alias WhatsBetter.Thing
   alias WhatsBetter.Pair
   alias WhatsBetter.Ranking
+  alias WhatsBetter.Router
 
   plug :authenticate_user when action in [:vote]
 
   def index(conn, _params) do
     [thing_1, thing_2] = Thing.get_two_random
-
+    domain = Router.Helpers.url(conn)
     case _params["pair_id"] do
       nil ->
         previous_things = :no_previous_pair
@@ -25,7 +26,8 @@ defmodule WhatsBetter.PageController do
       best_things: best_things,
       worst_things: worst_things,
       previous_things: previous_things,
-      pair_id: _params["pair_id"]
+      pair_id: _params["pair_id"],
+      domain: domain
   end
 
   def vote(conn, params) do
