@@ -4,6 +4,6 @@ defmodule WhatsBetter.PairController do
 
   def show(conn, %{"id" => id}) do
     things = Pair.get_things_with_votes(id)
-    render conn, "show.html", things: things
+    render conn, "show.html", things: things, pair_id: id
   end
 end

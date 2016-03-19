@@ -24,7 +24,8 @@ defmodule WhatsBetter.PageController do
       thing_2: thing_2,
       best_things: best_things,
       worst_things: worst_things,
-      previous_things: previous_things
+      previous_things: previous_things,
+      pair_id: _params["pair_id"]
   end
 
   def vote(conn, params) do

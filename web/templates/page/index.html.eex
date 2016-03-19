@@ -39,7 +39,7 @@
           <div class="text-center">
             <h1>Previous Pair</h1>
           </div>
-          <%= render(WhatsBetter.PairView, "show.html", things: @previous_things) %>
+          <%= render(WhatsBetter.PairView, "show.html", things: @previous_things, pair_id: @pair_id) %>
       <%= end %>
     </p>
   </div>
