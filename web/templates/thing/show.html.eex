@@ -1,0 +1,7 @@
+<h1>
+  <%=  @thing.name %>
+</h1>
+<h2>
+  Category: <%= @thing.category %>
+</h2>
+<img src="<%= @thing.image %>">

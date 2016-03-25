@@ -34,6 +34,7 @@ defmodule WhatsBetter.Mixfile do
      {:gettext, "~> 0.9"},
      {:rethinkdb, github: "hamiltop/rethinkdb-elixir"},
      {:cowboy, "~> 1.0"},
-     {:comeonin, "~> 2.1.0"}]
+     {:comeonin, "~> 2.1.0"},
+     {:uuid, "~> 1.1.3"} ]
   end
 end

@@ -1,7 +1,7 @@
 defmodule WhatsBetter.ThingController do
   use WhatsBetter.Web, :controller
   alias WhatsBetter.Thing
-  
+
   plug :authenticate_user when action in [:index, :new]
 
   def index(conn, _params ) do
@@ -18,5 +18,10 @@ defmodule WhatsBetter.ThingController do
     thing = struct(Thing, thing_params)
     Thing.save(thing)
     redirect(conn, to: "/things")
+  end
+
+  def show(conn, %{"id" => id}) do
+    thing = Thing.get(id)
+    render(conn, "show.html", thing: thing)
   end
 end

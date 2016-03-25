@@ -10,4 +10,5 @@
   "plug": {:hex, :plug, "1.1.0"},
   "poison": {:hex, :poison, "2.0.1"},
   "ranch": {:hex, :ranch, "1.2.1"},
-  "rethinkdb": {:git, "https://github.com/hamiltop/rethinkdb-elixir.git", "d9ae3895855143ac8838540b8bcb14f5019e66a3", []}}
+  "rethinkdb": {:git, "https://github.com/hamiltop/rethinkdb-elixir.git", "d9ae3895855143ac8838540b8bcb14f5019e66a3", []},
+  "uuid": {:hex, :uuid, "1.1.3"}}

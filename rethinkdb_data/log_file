@@ -211,3 +211,25 @@
 2016-03-09T09:24:38.729021000 2.430050s info: Table afa3e38b-1eb1-4164-b35b-d8ce33ff7571: Starting a new Raft election for term 6.
 2016-03-09T09:24:38.748647000 2.449675s info: Table afa3e38b-1eb1-4164-b35b-d8ce33ff7571: This server is Raft leader for term 6. Latest log index is 14.
 2016-03-09T09:24:38.871704000 2.572732s notice: A newer version of the RethinkDB server is available: 2.2.5. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2016-03-25T15:31:36.567634000 562139.131226s notice: Server got SIGINT from pid 4987, uid 501; shutting down...
+2016-03-25T15:31:36.567885000 562139.131473s notice: Shutting down client connections...
+2016-03-25T15:31:36.568196000 562139.131784s notice: All client connections closed.
+2016-03-25T15:31:36.568207000 562139.131794s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2016-03-25T15:31:36.590752000 562139.154340s notice: Storage engine shut down.
+2016-03-25T15:31:38.737208000 0.437873s notice: Running rethinkdb 2.2.4 (CLANG 7.0.2 (clang-700.1.81))...
+2016-03-25T15:31:38.746229000 0.446890s notice: Running on Darwin 15.3.0 x86_64
+2016-03-25T15:31:38.746305000 0.446964s notice: Loading data from directory /Users/martimatix/Projects/sandbox/whats_better/rethinkdb_data
+2016-03-25T15:31:38.796328000 0.496988s info: Automatically using cache size of 486 MB
+2016-03-25T15:31:38.797259000 0.497918s notice: Listening for intracluster connections on port 29015
+2016-03-25T15:31:38.875041000 0.575700s notice: Listening for client driver connections on port 28015
+2016-03-25T15:31:38.875206000 0.575865s notice: Listening for administrative HTTP connections on port 8080
+2016-03-25T15:31:38.875208000 0.575867s notice: Listening on addresses: 127.0.0.1, ::1
+2016-03-25T15:31:38.875219000 0.575879s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2016-03-25T15:31:38.875220000 0.575879s notice: Server ready, "Marios_MBP_lan_hnj" 39411d25-27ab-40b9-a0ca-c18b98c4786c
+2016-03-25T15:31:39.872818000 1.573416s info: Table 51e4da7c-e932-4e23-b013-627af21dd48f: Starting a new Raft election for term 6.
+2016-03-25T15:31:39.902037000 1.602636s info: Table 51e4da7c-e932-4e23-b013-627af21dd48f: This server is Raft leader for term 6. Latest log index is 14.
+2016-03-25T15:31:40.326526000 2.027124s info: Table afa3e38b-1eb1-4164-b35b-d8ce33ff7571: Starting a new Raft election for term 7.
+2016-03-25T15:31:40.344312000 2.044910s info: Table afa3e38b-1eb1-4164-b35b-d8ce33ff7571: This server is Raft leader for term 7. Latest log index is 17.
+2016-03-25T15:31:40.649606000 2.350204s info: Table f274ee60-c56f-4760-ae4d-a09fa077e60d: Starting a new Raft election for term 9.
+2016-03-25T15:31:40.658996000 2.359595s info: Table f274ee60-c56f-4760-ae4d-a09fa077e60d: This server is Raft leader for term 9. Latest log index is 23.
+2016-03-25T15:31:40.699473000 2.400072s notice: A newer version of the RethinkDB server is available: 2.2.5. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.

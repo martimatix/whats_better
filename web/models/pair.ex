@@ -12,7 +12,6 @@ defmodule WhatsBetter.Pair do
     update_or_create_votes(thing_1_id, thing_2_id, winner_id)
   end
 
-  # TODO: Is this the best place for this? Is it better to put it in Thing module?
   defp update_score_of_things(thing_1_id, thing_2_id, winner_id) do
     [thing_1, thing_2] = [Thing.get(thing_1_id), Thing.get(thing_2_id)]
     thing_1_new_score = Elo.calculate(thing_1.score, thing_2.score, points(thing_1_id, winner_id))
@@ -67,7 +66,6 @@ defmodule WhatsBetter.Pair do
     if winner_id == thing_id, do: 1, else: 0
   end
 
-  #TODO: Update the votes without rewriting the entire array
   defp update_votes(things, winner_id) do
     Enum.map(things, fn(thing) ->
       case thing do
@@ -79,10 +77,7 @@ defmodule WhatsBetter.Pair do
       end)
     end
 
-  # TODO: No need to use pair_id and use regular id if you take advanage of `has_fields`
-  defp pair_id(things) do
-    things
-    |> Enum.sort
-    |> Enum.join
+  defp pair_id([thing_1_id, thing_2_id]) do
+    UUID.uuid3(thing_1_id, thing_2_id)
   end
 end
