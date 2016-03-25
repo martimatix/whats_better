@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-sm-4">
+    <div class="text-center">
+      <h1>Previous Pair</h1>
+    </div>
+    <%= render(WhatsBetter.PairView, "show.html", things: @previous_things, pair_id: @pair_id, domain: @domain) %>
+  </div>
+  <div class="col-sm-8">
+    <div class="text-center">
+      <h1>What's better?</h1>
+      <p>
+        Click on the picture of the item you think is better.
+      </p>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 text-center">
+        <%= form_for @conn, "vote", [as: :ballot], fn f -> %>
+        <h2><%= @thing_1.name %></h2>
+        <h4>Category: <%= @thing_1.category %></h4>
+        <%= hidden_input f, :thing_1, value: @thing_1.id %>
+        <%= hidden_input f, :thing_2, value: @thing_2.id %>
+        <%= hidden_input f, :vote, value: @thing_1.id %>
+        <input type="image" src="<%= @thing_1.image %>" alt="<%= "#{@thing_1.name} - submit" %>" class="thing-submit" />
+        <%= end %>
+      </div>
+      <div class="col-xs-12 col-sm-6 text-center">
+        <%= form_for @conn, "vote", [as: :ballot], fn f -> %>
+        <h2><%= @thing_2.name %></h2>
+        <h4>Category:  <%= @thing_2.category %></h4>
+        <%= hidden_input f, :thing_1, value: @thing_1.id %>
+        <%= hidden_input f, :thing_2, value: @thing_2.id %>
+        <%= hidden_input f, :vote, value: @thing_2.id %>
+        <input type="image" src="<%= @thing_2.image %>" alt="<%= "#{@thing_2.name} - submit" %>" />
+        <%= end %>
+      </div>
+    </div>
+  </div>
+</div>

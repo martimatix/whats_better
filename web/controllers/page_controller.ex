@@ -13,21 +13,19 @@ defmodule WhatsBetter.PageController do
     domain = Router.Helpers.url(conn)
     case _params["pair_id"] do
       nil ->
-        previous_things = :no_previous_pair
-        best_things = Ranking.top
-        worst_things = Ranking.bottom
+        render conn, "index.html",
+          thing_1: thing_1,
+          thing_2: thing_2
       _ ->
         previous_things = Pair.get_things_with_votes(_params["pair_id"])
         [best_things, worst_things] = [nil, nil]
+        render conn, "main.html",
+        thing_1: thing_1,
+        thing_2: thing_2,
+        previous_things: previous_things,
+        pair_id: _params["pair_id"],
+        domain: domain
     end
-    render conn, "index.html",
-      thing_1: thing_1,
-      thing_2: thing_2,
-      best_things: best_things,
-      worst_things: worst_things,
-      previous_things: previous_things,
-      pair_id: _params["pair_id"],
-      domain: domain
   end
 
   def vote(conn, params) do
