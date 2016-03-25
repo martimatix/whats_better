@@ -2,8 +2,8 @@
   <h1>Best & Worst</h1>
 </div>
 <div class="row">
-  <div class="col-sm-3">
-    <h3>Best things in the world</h3>
+  <div class="col-sm-6 col-md-3 col-xl-1">
+    <h4>Best things in the world</h4>
     <table class="table table-striped">
       <thead>
         <tr>
@@ -20,7 +20,9 @@
         <% end %>
       </tbody>
     </table>
-    <h3>Worst things in the world</h3>
+  </div>
+  <div class="col-sm-6 col-md-3 col-xl-1">
+    <h4>Worst things in the world</h4>
     <table class="table table-striped">
       <thead>
         <tr>
@@ -38,7 +40,7 @@
       </tbody>
     </table>
   </div>
-  <div class="col-sm-9">
+  <div class="col-sm-12 col-md-6 col-xl-10">
     <div id="disqus_thread"></div>
     <script>
     var disqus_config = function () {
