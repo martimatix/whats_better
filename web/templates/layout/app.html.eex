@@ -16,7 +16,7 @@
     <div class="container-fluid">
       <div class="header">
         <ol class="breadcrumb text-right">
-          <li><%= link "Home", to: page_path(@conn, :index) %></li>
+          <li><%= link "New Pair", to: page_path(@conn, :index) %></li>
           <li><%= link "Recent Comments", to: page_path(@conn, :recent_comments) %></li>
           <li><%= link "Best & Worst", to: ranking_path(@conn, :index) %></li>
           <%= if @current_user do %>
