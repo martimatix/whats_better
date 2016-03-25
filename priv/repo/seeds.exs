@@ -7,37 +7,117 @@ seeds = [
   %Thing{
     name: "Sex",
     category: "Philosophy",
-    image: "http://www.womenshealthmag.com/sites/womenshealthmag.com/files/images/cuddle-after-sex_0.jpg"
+    image: "http://imgur.com/oxPRfuZ.jpg"
   },
   %Thing{
     name: "Love",
     category: "Philosophy",
-    image: "http://www.icytales.com/wp-content/uploads/2015/09/Love-vs-Logic.jpg"
+    image: "http://imgur.com/AfQOBkb.jpg"
   },
   %Thing{
     name: "A sense of humour",
     category: "Philosophy",
-    image: "http://media.rd.com/rd/images/rdc/books/stealth-health/sense-of-humor-af.jpg"
+    image: "http://imgur.com/oprtPq9.jpg"
   },
   %Thing{
     name: "Potato",
     category: "Food",
-    image: "https://static-secure.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/9/24/1411574454561/03085543-87de-47ab-a4eb-58e7e39d022e-620x372.jpeg"
+    image: "http://imgur.com/suQrG5N.jpg"
   },
   %Thing{
     name: "Clark Kent",
     category: "People",
-    image: "https://s-media-cache-ak0.pinimg.com/236x/32/53/be/3253beb8efb1fbe891e26dbeac751603.jpg"
+    image: "http://i.imgur.com/78BoHWM.jpg"
   },
   %Thing{
     name: "AIDS",
     category: "Medical",
-    image: "http://www.med.upenn.edu/pmharc/images/aids_banner.jpg"
+    image: "http://imgur.com/YzrLSKF.jpg"
   },
   %Thing{
     name: "The Holocaust",
     category: "History",
-    image: "http://socialistreview.org.uk/sites/default/files/field/image/holocaust.jpg"
+    image: "http://imgur.com/Wu4HZ1e.jpg"
+  },
+  %Thing{
+    name: "Smelling fingers in public",
+    category: "Philosophy",
+    image: "http://imgur.com/aqanixB.jpg"
+  },
+  %Thing{
+    name: "Free money",
+    category: "Philosophy",
+    image: "http://imgur.com/8kXpxoD.jpg"
+  },
+  %Thing{
+    name: "Batman",
+    category: "People",
+    image: "http://imgur.com/das8xQS.jpg"
+  },
+  %Thing{
+    name: "Superman",
+    category: "People",
+    image: "http://imgur.com/dgO0Axe.jpg"
+  },
+  %Thing{
+    name: "Taylor Swift",
+    category: "Music",
+    image: "http://imgur.com/ChqNVAR.jpg"
+  },
+  %Thing{
+    name: "House of Cards",
+    category: "Entertainment",
+    image: "http://imgur.com/Fd9tQ0K.jpg"
+  },
+  %Thing{
+    name: "Pikachu",
+    category: "Anime",
+    image: "http://imgur.com/ceXdMfp.jpg"
+  },
+  %Thing{
+    name: "Receiving a gift",
+    category: "Philosophy",
+    image: "http://imgur.com/t0ZMLyB.jpg"
+  },
+  %Thing{
+    name: "Giving a gift",
+    category: "Philosophy",
+    image: "http://imgur.com/t0ZMLyB.jpg"
+  },
+  %Thing{
+    name: "Children with cancer",
+    category: "Medical",
+    image: "http://imgur.com/ONXyVzW.jpg"
+  },
+  %Thing{
+    name: "Donald Trump",
+    category: "People",
+    image: "http://imgur.com/K4ewOZ3.jpg"
+  },
+  %Thing{
+    name: "Hillary Clinton",
+    category: "People",
+    image: "http://imgur.com/CYd6s1h.jpg"
+  },
+  %Thing{
+    name: "Bernie Sanders",
+    category: "People",
+    image: "http://imgur.com/vOFgosg.jpg"
+  },
+  %Thing{
+    name: "Buddhism",
+    category: "Religion",
+    image: "http://imgur.com/BqWSHHM.jpg"
+  },
+  %Thing{
+    name: "High School",
+    category: "Education",
+    image: "http://imgur.com/kpiAVeM.jpg"
+  },
+  %Thing{
+    name: "Reddit",
+    category: "Internet",
+    image: "http://imgur.com/ANV1lMJ.jpg"
   }
 ]
 

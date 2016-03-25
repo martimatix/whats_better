@@ -2,7 +2,7 @@ defmodule WhatsBetter.Ranking do
   defstruct id: nil, name: nil, rank: nil, score: nil
 
   # TODO: Create index on score
-  @num_things 4
+  @num_things 10
 
   import RethinkDB.Lambda
   import RethinkDB.Query, except: [get: 2, get: 1]
