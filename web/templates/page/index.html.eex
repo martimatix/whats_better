@@ -3,7 +3,8 @@
     <p>
       <%= case @previous_things do %>
         <%= :no_previous_pair -> %>
-          <%=  render(WhatsBetter.RankingView, "index.html", best_things: @best_things, worst_things: @worst_things, conn: @conn) %>
+          <h1>Welcome to What's Better!</h1>
+          <%=  render(WhatsBetter.RankingView, "rankings.html", best_things: @best_things, worst_things: @worst_things, conn: @conn) %>
         <%= _ -> %>
           <div class="text-center">
             <h1>Previous Pair</h1>
