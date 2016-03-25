@@ -11,7 +11,8 @@ config :whats_better, WhatsBetter.Endpoint,
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
-  watchers: [node: ["node_modules/brunch/bin/brunch", "watch", "--stdin"]]
+  watchers: [node: ["node_modules/brunch/bin/brunch", "watch", "--stdin"]],
+  disqus_site: "whatsbetterdev"
 
 # Watch static and templates for browser reloading.
 config :whats_better, WhatsBetter.Endpoint,
@@ -23,6 +24,8 @@ config :whats_better, WhatsBetter.Endpoint,
       ~r{web/templates/.*(eex)$}
     ]
   ]
+
+
 
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"

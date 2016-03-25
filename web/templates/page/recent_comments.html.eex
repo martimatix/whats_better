@@ -1,1 +1,1 @@
-<script type="text/javascript" src="http://whats-better.disqus.com/combination_widget.js?num_items=25&hide_mods=0&color=grey&default_tab=recent&excerpt_length=70"></script>
+<script type="text/javascript" src="<%= WhatsBetter.Disqus.recent_comments %>"></script>
