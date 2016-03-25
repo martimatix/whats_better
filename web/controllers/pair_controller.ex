@@ -1,6 +1,7 @@
 defmodule WhatsBetter.PairController do
   use WhatsBetter.Web, :controller
   alias WhatsBetter.Pair
+  alias WhatsBetter.Router
 
   def show(conn, %{"id" => id}) do
     things = Pair.get_things_with_votes(id)

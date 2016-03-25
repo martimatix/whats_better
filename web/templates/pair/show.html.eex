@@ -21,8 +21,9 @@
 <script>
   var disqus_config = function () {
     // TODO: Change below to an ENV variable or use a figure out how to get the current URL
-    this.page.url = "<%= pair_url_(@domain, @pair_id) %>"
+    this.page.url = "<%= pair_link(@domain, @pair_id) %>";
     this.page.identifier = "<%= @pair_id %>";
+    this.page.title = "<%= pair_title(@things) %>"
   };
   (function() { // DON'T EDIT BELOW THIS LINE
   var d = document, s = d.createElement('script');
