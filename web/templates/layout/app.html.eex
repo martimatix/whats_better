@@ -8,16 +8,15 @@
     <meta name="author" content="">
 
     <title>What's Better?</title>
-    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="anonymous">
   </head>
 
   <body>
     <div class="container-fluid">
       <div class="header">
         <ol class="breadcrumb text-right">
+          <li><%= link "Home", to: page_path(@conn, :index) %></li>
           <li><%= link "Recent Comments", to: page_path(@conn, :recent_comments) %></li>
           <li><%= link "Best & Worst", to: ranking_path(@conn, :index) %></li>
           <%= if @current_user do %>

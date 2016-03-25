@@ -37,7 +37,7 @@ seeds = [
   %Thing{
     name: "The Holocaust",
     category: "History",
-    image: "http://www.theholocaustexplained.org/public/cms/70/92/204/268/yN7eKq_web.jpg"
+    image: "http://socialistreview.org.uk/sites/default/files/field/image/holocaust.jpg"
   }
 ]
 
