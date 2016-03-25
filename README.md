@@ -1,18 +1,16 @@
-# WhatsBetter
+# What's Better?
 
-To start your Phoenix app:
+To run this on your computer:
 
+  1. Install Elixir
+  1. Install rethinkdb
   1. Install dependencies with `mix deps.get`
-  2. Start Phoenix endpoint with `mix phoenix.server`
+  1. Run rethinkdb with `rethinkdb`
+  1. Start Phoenix endpoint with `mix phoenix.server`
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
+## About
+This is a tribute to [whatsbetter.com](http://web.archive.org/web/20040602034418/http://whatsbetter.com/) that mysteriously disappeared in early 2005. It was also an excuse to build something using Phoenix and rethinkdb.
 
-## Learn more
-
-  * Official website: http://www.phoenixframework.org/
-  * Guides: http://phoenixframework.org/docs/overview
-  * Docs: http://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+Essentially, you are presented with two items and you click on the item that you think is better.
