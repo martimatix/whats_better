@@ -17,7 +17,7 @@ defmodule WhatsBetter.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {WhatsBetter, []},
-     applications: [:phoenix, :phoenix_html, :cowboy, :logger, :gettext, :comeonin]]
+     applications: [:phoenix, :phoenix_html, :cowboy, :logger, :gettext, :rethinkdb, :uuid, :comeonin]]
   end
 
   # Specifies which paths to compile per environment.
