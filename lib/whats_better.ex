@@ -11,7 +11,7 @@ defmodule WhatsBetter do
       supervisor(WhatsBetter.Endpoint, []),
       # Here you could define other workers and supervisors as children
       # worker(WhatsBetter.Worker, [arg1, arg2, arg3]),
-      worker(RethinkDB.Connection, [[name: WhatsBetter.Database, host: 'localhost', port: 28015]])
+      worker(RethinkDB.Connection, [[name: WhatsBetter.Database, host: '127.0.0.1', port: 28015]])
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
