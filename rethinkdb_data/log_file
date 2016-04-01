@@ -1,9 +1,0 @@
-2016-03-26T19:15:49.392254000 0.395462s notice: Recursively removing directory /Users/martimatix/Projects/sandbox/whats_better/rethinkdb_data/tmp
-2016-03-26T19:15:49.393916000 0.397127s notice: Initializing directory /Users/martimatix/Projects/sandbox/whats_better/rethinkdb_data
-2016-03-26T19:15:49.394013000 0.397220s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/Users/martimatix/Projects/sandbox/whats_better/rethinkdb_data' did not already exist or is empty.)
-2016-03-26T19:15:49.394044000 0.397250s notice: Running rethinkdb 2.2.4 (CLANG 7.0.2 (clang-700.1.81))...
-2016-03-26T19:15:49.419872000 0.423080s notice: Running on Darwin 15.3.0 x86_64
-2016-03-26T19:15:49.419917000 0.423123s notice: Loading data from directory /Users/martimatix/Projects/sandbox/whats_better/rethinkdb_data
-2016-03-26T19:15:49.501750000 0.504957s info: Automatically using cache size of 100 MB
-2016-03-26T19:15:49.501766000 0.504973s warn: Cache size is very low and may impact performance.
-2016-03-26T19:15:49.502332000 0.505539s error: TCP socket creation failed for port 29015: Address already in use.
