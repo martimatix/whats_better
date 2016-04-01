@@ -6,8 +6,6 @@ defmodule WhatsBetter.PageController do
   alias WhatsBetter.Ranking
   alias WhatsBetter.Router
 
-  plug :authenticate_user when action in [:vote]
-
   def index(conn, _params) do
     [thing_1, thing_2] = Thing.get_two_random
     domain = Router.Helpers.url(conn)
