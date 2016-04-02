@@ -1,5 +1,5 @@
 defmodule WhatsBetter.Thing do
-  defstruct id: nil, name: nil, image: nil, category: nil, score: 0
+  defstruct id: nil, name: nil, image: nil, category: nil, score: 0, created_at: nil
 
   require Logger
 
@@ -22,9 +22,11 @@ defmodule WhatsBetter.Thing do
       image: thing.image,
       category: thing.category,
       score: thing.score,
+      created_at: thing.created_at,
     }
     case thing.id do
       nil ->
+        data = Map.put(data, :created_at, now)
         query =
           table("things")
           |> insert(data)
@@ -62,6 +64,7 @@ defmodule WhatsBetter.Thing do
       image: thing["image"],
       category: thing["category"],
       score: thing["score"],
+      created_at: thing["created_at"],
     }
   end
 end
