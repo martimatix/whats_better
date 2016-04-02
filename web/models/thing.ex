@@ -1,5 +1,5 @@
 defmodule WhatsBetter.Thing do
-  defstruct id: nil, name: nil, image: nil, category: nil, score: 0, created_at: nil
+  defstruct id: nil, name: nil, image: nil, category: nil, score: 0, created_at: nil, total_votes: 0, total_wins: 0
 
   require Logger
 
@@ -23,6 +23,8 @@ defmodule WhatsBetter.Thing do
       category: thing.category,
       score: thing.score,
       created_at: thing.created_at,
+      total_votes: thing.total_votes,
+      total_wins: thing.total_wins,
     }
     case thing.id do
       nil ->
@@ -65,6 +67,12 @@ defmodule WhatsBetter.Thing do
       category: thing["category"],
       score: thing["score"],
       created_at: thing["created_at"],
+      total_votes: nil_to_zero(thing["total_votes"]),
+      total_wins: nil_to_zero(thing["total_wins"]),
     }
+  end
+
+  defp nil_to_zero(x) do
+    if is_integer(x), do: x, else: 0
   end
 end

@@ -16,10 +16,14 @@ defmodule WhatsBetter.Pair do
     [thing_1, thing_2] = [Thing.get(thing_1_id), Thing.get(thing_2_id)]
     thing_1_new_score = Elo.calculate(thing_1.score, thing_2.score, points(thing_1_id, winner_id))
     thing_2_new_score = Elo.calculate(thing_2.score, thing_1.score, points(thing_2_id, winner_id))
-    thing_1 = %{thing_1 | score: thing_1_new_score}
-    thing_2 = %{thing_2 | score: thing_2_new_score}
-    Thing.save(thing_1)
-    Thing.save(thing_2)
+    update_thing_params(thing_1, thing_1_new_score, winner_id) |> Thing.save
+    update_thing_params(thing_2, thing_2_new_score, winner_id) |> Thing.save
+  end
+
+  defp update_thing_params(thing, thing_new_score, winner_id) do
+    %{ thing | score: thing_new_score,
+               total_votes: thing.total_votes + 1,
+               total_wins: thing.total_wins + points(thing.id, winner_id) }
   end
 
   defp update_or_create_votes(thing_1_id, thing_2_id, winner_id, db \\ WhatsBetter.Database) do
