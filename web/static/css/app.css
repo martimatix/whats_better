@@ -37,7 +37,7 @@ form.link, form.button {
 }
 
 .thing img, input[type="image"] {
-  max-height: 40vh;
+  max-height: 300px;
   max-width: 100%;
 }
 
