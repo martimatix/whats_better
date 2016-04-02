@@ -41,12 +41,44 @@ form.link, form.button {
   max-width: 100%;
 }
 
+.rank-header {
+  width: 2em;
+}
+
+.main h1.previous-pair {
+  font-size: 33px;
+}
+
+.main .previous-pair h2 {
+  font-size: 24px;
+}
+
+.main .previous-pair h4 {
+  font-size: 16px;
+}
+
+.main .previous-pair {
+  opacity: 0.7;
+}
+
 @media (max-width: 768px) {
   .col-xs-12 + .col-xs-12 {
     margin-top: 20px;
   }
-}
 
-.rank-header {
-  width: 2em;
+  .vote.col-sm-8 {
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .previous-pair h1 {
+    font-size: 30px;
+  }
+
+  .previous-pair h2 {
+    font-size: 20px;
+  }
+
+  .previous-pair h4 {
+    font-size: 14px;
+  }
 }
