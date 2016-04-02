@@ -5,11 +5,7 @@
         <%= thing["name"] %>
       </h2>
       <h4>
-        <!-- TODO: Update this to wins against other thing -->
-        Votes: <%= thing["votes"] %>
-      </h4>
-      <h4>
-        Score: <%= round(thing["score"]) %>
+        <%= "#{wins_against_other_thing(@things, thing)} #{thing["votes"]}" %>
       </h4>
       <p>
         <img src="<%= thing["image"] %>">
